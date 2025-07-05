@@ -30,7 +30,48 @@ number_str = "123"
 float_num = 45.8
 
 number_int = int(number_str)
-print("Строку в число", number_int)
+print("Строку в число:", number_int)
 
 float_str = str(float_num)
-print(f'"{float_str}"')
+print("Строка:", f'"{float_str}"')
+
+
+# Операции сравнения
+
+x = 10
+y = 5
+
+print("10 > 5", x > y)
+print("10 < 5",x < y)
+print("10 == 5", x == y)
+print("10 != 5", x != y)
+
+
+# Именование переменных
+
+first_number = 10
+my_variable = "text"
+yazik = "Python"
+
+print(first_number)
+print(my_variable)
+print(yazik)
+
+
+# Переопределение переменных
+
+price = 100
+discount = 20
+price = price - discount
+final_price = price
+
+print(final_price)
+
+
+# Операции сравнения и логика
+
+age = 18
+is_student = True
+
+access_allowed = age >= 18 and is_student
+print("Доступ разрешён:", access_allowed)
