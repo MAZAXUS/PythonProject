@@ -2,6 +2,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver import Keys
 
+# ДЗ по передаче ключей в поля через локаторы
+
 driver = webdriver.Chrome()
 driver.get("https://demoqa.com/text-box")
 
