@@ -4,18 +4,20 @@ from selenium import webdriver
 import pytest
 import time
 
-@pytest.fixture(name="WDI")
+@pytest.fixture(name="WDI", autouse=True) # Фикстура по примеру урока от Александра
 def webdriver_init(request):
     driver = webdriver.Chrome()
     request.cls.driver = driver
     yield
     driver.quit()
 
-@pytest.fixture(name="auth")
+@pytest.fixture(name="auth") # Другой вариант фикстуры
 def auth_traf():
+
     driver = webdriver.Chrome()
 
     driver.get("https://lk.staging.appgrade.pro/login")
+
     login_field = driver.find_element("xpath", "//input[@type='text']")
     password_field = driver.find_element("xpath", "//input[@type='password']")
     login_button = driver.find_element("xpath", "//button[@type='submit']")
